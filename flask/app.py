@@ -1,20 +1,15 @@
 from flask import Flask, render_template, request, url_for
+import random
 
 app = Flask(__name__)
 
-@app.route("/") #root, sort of home page
-def hello():
-    return render_template('index.html')
-
-@app.route('/signup', methods=['GET','POST'])
-def signup():
+@app.route('/eightball', methods=['GET','POST'])
+def eightball():
     if request.method == 'POST':
-        return f'Thanks for submitting the form {request.form["fname"]}!'
-    return render_template('signup.html', signup=url_for('signup'))
+        answers = ["I don't know", "/j", "hell no", "maybe", "no", "yeah, for sure"]
+        return f'The eightball says {random.choice(answers)}!'
+    return render_template('eightball.html', question=url_for('eightball'))
 
-@app.route('/Goodbye')
-def goodbye():
-    return "Goodbye, World!"
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80, debug=True)

@@ -1,3 +1,19 @@
-h1 {
+p {
     margin: auto;
+    font-size: 30px;
+    font-family: monospace;
+}
+
+#title {
+    justify-content: flex-end;
+}
+
+#eightball {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+#ouch {
+    font-size: 5px;
 }
