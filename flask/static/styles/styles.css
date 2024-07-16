@@ -4,8 +4,8 @@ p {
     font-family: monospace;
 }
 
-#title {
-    justify-content: flex-end;
+h1 {
+    justify-content: center;
 }
 
 #eightball {
@@ -14,6 +14,27 @@ p {
     gap: 50px;
 }
 
-#ouch {
-    font-size: 5px;
+
+img {
+    animation-name: spin;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}  
+
+/* #ouch {
+    font-size: 1px;
+}
+
+#popup {
+} */
+

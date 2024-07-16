@@ -5,20 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Magic 8 ball </title>
-    <link rel="stylesheet" href="../static/styles/styles.css">
+    <link rel="stylesheet" href="../static/styles/styles.css"> <!-- ".." needs to go up one to find static folder, currently at templates folder-->
 </head>
 <body>
     <div id="title">
-        <h1> Magic 8 ball</h1>
+        <h1> Magic 8 ball </h1>
     </div>
     
 
     <div id="eightball">
-        <div popover id="ouch">
-            <p> ow! <p>
-        </div>
+        
+        <div id="popup" >
+            <div popover id="ouch">
+                <p> ow! <p>
+            </div>
 
-        <button popovertarget="ouch" > <img src="https://www.museumofplay.org/app/uploads/2021/08/8ball.jpg"> </button>
+            <button popovertarget="ouch" > <img src="https://www.museumofplay.org/app/uploads/2021/08/8ball.jpg"> </button>
+        </div>
 
         <div>
             <form action="{{question}}" method="POST">
